@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Presenting 27 Batch JNV Morigaon | Batch Directory & Memory Lane</title>
+  <meta name="description" content="Official batch yearbook, bio directory, and Memory Lane photo archives for the 27th Batch of Jawahar Navodaya Vidyalaya Morigaon.">
+  <!-- Tailwind CSS CDN for zero-config GitHub Pages hosting -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Outfit & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    }
+    h1, h2, h3, .font-display {
+      font-family: 'Outfit', 'Plus Jakarta Sans', sans-serif;
+    }
+    @keyframes subtleFloat {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-4px); }
+    }
+    .animate-float {
+      animation: subtleFloat 3.5s ease-in-out infinite;
+    }
+  </style>
+<script src="/_aistudio-iframe.js?v=6634132a"></script></head>
+<body class="bg-slate-50 text-slate-900 antialiased selection:bg-amber-100 selection:text-amber-900">
+
+  <!-- ==================== WELCOME ENTRY SCREEN ==================== -->
+  <div id="welcome-intro" class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/95 backdrop-blur-xl transition-opacity duration-500">
+    <div class="absolute inset-0 overflow-hidden pointer-events-none">
+      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-gradient-to-tr from-amber-500/20 via-rose-500/15 to-sky-500/20 rounded-full blur-3xl opacity-80"></div>
+    </div>
+
+    <div class="relative z-10 max-w-2xl mx-4 text-center px-6 py-10 md:py-14 rounded-3xl bg-slate-900/85 border border-slate-800 shadow-2xl">
+      <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-amber-500/20 border border-amber-500/30 text-amber-300 mb-6 shadow-inner animate-float">
+        <svg class="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5z" />
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+        </svg>
+      </div>
+
+      <div class="flex items-center justify-center gap-2 text-amber-400 font-semibold tracking-widest text-xs md:text-sm uppercase mb-3">
+        <span>✨ Presenting ✨</span>
+      </div>
+
+      <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-4 leading-tight font-display">
+        <span class="block text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-amber-100">
+          27 Batch
+        </span>
+        <span class="text-slate-100 text-2xl md:text-4xl block mt-1">
+          JNV Morigaon
+        </span>
+      </h1>
+
+      <p class="text-slate-300 text-sm md:text-base max-w-lg mx-auto mb-8 leading-relaxed">
+        Brotherhood, hostel chronicles, classroom chaos, and timeless Navodaya memories.
+      </p>
+
+      <div class="grid grid-cols-4 gap-2 max-w-md mx-auto mb-8 text-xs font-semibold">
+        <div class="py-2 px-1 rounded-xl bg-amber-500/10 border border-amber-500/25 text-amber-300">Aravali</div>
+        <div class="py-2 px-1 rounded-xl bg-rose-500/10 border border-rose-500/25 text-rose-300">Shivalik</div>
+        <div class="py-2 px-1 rounded-xl bg-purple-500/10 border border-purple-500/25 text-purple-300">Udaigiri</div>
+        <div class="py-2 px-1 rounded-xl bg-sky-500/10 border border-sky-500/25 text-sky-300">Nilgiri</div>
+      </div>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+        <button onclick="dismissIntro()" class="px-6 py-3.5 rounded-xl bg-gradient-to-r from-amber-500 to-amber-600 text-slate-950 font-semibold text-sm hover:from-amber-400 hover:to-amber-500 transition-all shadow-lg shadow-amber-500/25 cursor-pointer">
+          Enter Batch Directory &rarr;
+        </button>
+      </div>
+
+      <div class="mt-8 max-w-xs mx-auto">
+        <div class="h-1 w-full bg-slate-800 rounded-full overflow-hidden">
+          <div id="intro-progress" class="h-full bg-amber-400 transition-all duration-75" style="width: 0%"></div>
+        </div>
+        <span class="block text-[11px] text-slate-400 mt-2">Auto-opening batch directory...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== TOP NAVIGATION ==================== -->
+  <header class="sticky top-0 z-30 w-full bg-white/90 backdrop-blur-md border-b border-slate-200">
+    <div class="max-w-7xl mx-auto flex items-center justify-between gap-8 px-4 sm:px-6 py-3.5">
+      <a href="#" class="text-lg font-bold tracking-tight text-slate-900 flex items-center gap-2">
+        <span class="w-7 h-7 rounded-lg bg-amber-500/15 border border-amber-500/30 text-amber-700 flex items-center justify-center text-xs font-black">27</span>
+        <span>JNV Morigaon</span>
+        <span class="text-xs font-medium text-slate-500 hidden sm:inline">· 27th Batch</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-600">
+        <a href="#directory" class="hover:text-slate-900 transition-colors">Directory</a>
+        <a href="#memory-lane" class="hover:text-slate-900 transition-colors">Memory Lane</a>
+        <a href="#houses-overview" class="hover:text-slate-900 transition-colors">Houses</a>
+        <button onclick="reopenIntro()" class="hover:text-amber-700 text-amber-600 transition-colors flex items-center gap-1 cursor-pointer">
+          <span>Replay Intro</span>
+        </button>
+      </nav>
+
+      <div class="flex items-center gap-3">
+        <button onclick="downloadSelf()" class="px-4 py-2 text-xs sm:text-sm font-semibold text-slate-950 bg-amber-500 hover:bg-amber-400 rounded-lg transition-all shadow-sm flex items-center gap-2 cursor-pointer">
+          <svg class="w-4 h-4 text-slate-950" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Download index.html</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO PRESENTATION BANNER ==================== -->
+  <section class="relative bg-gradient-to-b from-slate-900 via-slate-900 to-slate-950 text-white pt-16 pb-20 px-4 sm:px-6 overflow-hidden">
+    <div class="absolute inset-0 opacity-20 pointer-events-none bg-[radial-gradient(#f59e0b_1px,transparent_1px)] [background-size:24px_24px]"></div>
+
+    <div class="relative max-w-5xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs font-semibold mb-6">
+        <span>JAWAHAR NAVODAYA VIDYALAYA MORIGAON</span>
+      </div>
+
+      <h2 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight mb-4 font-display">
+        Presenting 27 Batch JNV Morigaon
+      </h2>
+
+      <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-10 leading-relaxed">
+        The official batch yearbook and chronicle of our brotherhood. Search members, explore their unforgettable stories, and celebrate our batch legacy.
+      </p>
+
+      <!-- Stats strip (clean 3-metric display) -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 max-w-2xl mx-auto mb-10">
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-display">11</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Uploaded Bios</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-display">4</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">School Houses</div>
+        </div>
+        <div class="p-4 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
+          <div class="text-2xl sm:text-3xl font-extrabold text-amber-400 font-display">27th</div>
+          <div class="text-xs text-slate-400 uppercase tracking-wider mt-1">Batch Fraternity</div>
+        </div>
+      </div>
+
+      <!-- Live Search Bar -->
+      <div id="directory" class="max-w-2xl mx-auto">
+        <div class="relative flex items-center bg-white rounded-2xl shadow-xl p-2 border border-slate-200">
+          <div class="pl-3.5 pr-2 text-slate-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+            </svg>
+          </div>
+          <input
+            id="searchInput"
+            type="text"
+            oninput="handleSearch()"
+            placeholder="Search by student name, bio keywords, house..."
+            class="w-full text-slate-800 text-sm sm:text-base outline-none bg-transparent placeholder-slate-400 py-2"
+          />
+          <button id="clearSearchBtn" onclick="clearSearch()" class="hidden p-1.5 text-slate-400 hover:text-slate-600 rounded-lg">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+          </button>
+        </div>
+
+        <!-- Filter tabs: Aravali, Shivalik, Udaigiri, Nilgiri -->
+        <div class="flex items-center justify-center gap-1.5 mt-4 flex-wrap text-xs">
+          <button onclick="setHouseFilter('All')" id="filter-All" class="house-filter-btn px-4 py-1.5 rounded-xl font-medium bg-amber-500 text-slate-950 shadow-sm cursor-pointer transition-all font-semibold">
+            All (11)
+          </button>
+          <button onclick="setHouseFilter('Aravali')" id="filter-Aravali" class="house-filter-btn px-3.5 py-1.5 rounded-xl font-medium bg-white/10 text-white hover:bg-white/20 cursor-pointer transition-all">
+            Aravali
+          </button>
+          <button onclick="setHouseFilter('Shivalik')" id="filter-Shivalik" class="house-filter-btn px-3.5 py-1.5 rounded-xl font-medium bg-white/10 text-white hover:bg-white/20 cursor-pointer transition-all">
+            Shivalik
+          </button>
+          <button onclick="setHouseFilter('Udaigiri')" id="filter-Udaigiri" class="house-filter-btn px-3.5 py-1.5 rounded-xl font-medium bg-white/10 text-white hover:bg-white/20 cursor-pointer transition-all">
+            Udaigiri
+          </button>
+          <button onclick="setHouseFilter('Nilgiri')" id="filter-Nilgiri" class="house-filter-btn px-3.5 py-1.5 rounded-xl font-medium bg-white/10 text-white hover:bg-white/20 cursor-pointer transition-all">
+            Nilgiri
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DIRECTORY SECTION ==================== -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 py-12">
+    <div class="flex items-center justify-between mb-8 pb-4 border-b border-slate-200">
+      <div>
+        <h3 class="text-xl sm:text-2xl font-bold text-slate-900 font-display">Uploaded Student Profiles</h3>
+        <p class="text-xs sm:text-sm text-slate-500 mt-0.5" id="resultsCount">Showing 11 batchmates</p>
+      </div>
+      <button onclick="downloadSelf()" class="inline-flex items-center gap-1.5 text-xs font-semibold text-slate-700 bg-slate-100 hover:bg-slate-200 px-3 py-1.5 rounded-xl border border-slate-200 transition-colors">
+        <svg class="w-3.5 h-3.5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+        <span>Download index.html</span>
+      </button>
+    </div>
+
+    <!-- Student Cards Grid (3-column responsive layout) -->
+    <div id="studentsGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <!-- Empty State -->
+    <div id="emptyState" class="hidden py-16 text-center">
+      <div class="w-16 h-16 rounded-full bg-slate-100 text-slate-400 flex items-center justify-center mx-auto mb-4">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+      </div>
+      <h4 class="text-lg font-bold text-slate-800">No batchmates found</h4>
+      <p class="text-sm text-slate-500 max-w-sm mx-auto mt-1 mb-4">We couldn't find anyone matching your search query. Try another keyword or reset filters.</p>
+      <button onclick="clearSearch()" class="px-4 py-2 text-xs font-semibold rounded-xl bg-slate-900 text-white hover:bg-slate-800 transition-colors cursor-pointer">
+        Reset Search Filters
+      </button>
+    </div>
+
+    <!-- Attractive Announcement Card as requested:
+         "Rest All other student bio of 27 batch will be uploaded soon"
+         "More details will be updated Soon.stay Tuned" -->
+    <div class="mt-14 relative overflow-hidden rounded-3xl bg-gradient-to-r from-slate-900 via-slate-850 to-slate-900 text-white border border-slate-800 shadow-xl p-8 sm:p-10">
+      <div class="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+        <div class="flex items-center gap-4">
+          <div class="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center text-amber-400 shadow-inner shrink-0">
+            <svg class="w-7 h-7 text-amber-400 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <div class="space-y-1.5">
+            <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-400">
+              <span>✨ Upcoming Batch Additions</span>
+            </div>
+            <h3 class="text-xl sm:text-2xl font-bold font-display text-white">
+              Rest All other student bio of 27 batch will be uploaded soon
+            </h3>
+            <p class="text-slate-300 text-sm max-w-xl">
+              More details will be updated Soon. Stay Tuned!
+            </p>
+          </div>
+        </div>
+
+        <div class="shrink-0">
+          <span class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-white/10 border border-white/15 text-xs font-semibold text-amber-200">
+            Next Roster Drop Pending
+          </span>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- ==================== MEMORY LANE IMAGE GRID ==================== -->
+  <section id="memory-lane" class="py-16 px-4 sm:px-6 bg-slate-100/70 border-t border-slate-200">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+        <div>
+          <div class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-amber-700 mb-2">
+            <span>📷 School Events & Moments</span>
+          </div>
+          <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight font-display">
+            Memory Lane
+          </h2>
+          <p class="text-sm sm:text-base text-slate-600 mt-2 max-w-xl">
+            Reliving our iconic school events, athletics clashes, auditorium stage performances, and hostel days.
+          </p>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="flex items-center gap-1.5 p-1 bg-white rounded-xl border border-slate-200/80 shadow-2xs overflow-x-auto">
+          <button onclick="setMemoryFilter('All')" id="memcat-All" class="memcat-btn px-3 py-1.5 text-xs font-semibold rounded-lg bg-slate-900 text-white transition-all cursor-pointer">All Memories</button>
+          <button onclick="setMemoryFilter('Cultural')" id="memcat-Cultural" class="memcat-btn px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all cursor-pointer">Cultural</button>
+          <button onclick="setMemoryFilter('Sports')" id="memcat-Sports" class="memcat-btn px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all cursor-pointer">Sports</button>
+          <button onclick="setMemoryFilter('Hostel')" id="memcat-Hostel" class="memcat-btn px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all cursor-pointer">Hostel</button>
+          <button onclick="setMemoryFilter('Milestone')" id="memcat-Milestone" class="memcat-btn px-3 py-1.5 text-xs font-semibold rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all cursor-pointer">Milestone</button>
+        </div>
+      </div>
+
+      <!-- Memory Grid -->
+      <div id="memoryGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
+  </section>
+
+  <!-- ==================== HOUSES OVERVIEW ==================== -->
+  <section id="houses-overview" class="bg-white border-y border-slate-200 py-16 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="text-xs font-bold uppercase tracking-widest text-amber-700 block mb-2">Navodaya Houses</span>
+        <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 font-display">The Four Houses of JNV Morigaon</h3>
+        <p class="text-sm text-slate-600 mt-2">Every Navodayan holds an eternal bond with their House. Click any house below to filter batchmates instantly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div onclick="setHouseFilter('Aravali'); document.getElementById('directory').scrollIntoView({behavior: 'smooth'})" class="p-6 rounded-2xl bg-amber-50/70 border border-amber-200 hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">A</div>
+          <h4 class="text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors">Aravali House</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Courage, camaraderie, and undeniable batch energy that defines every school gathering.</p>
+          <span class="inline-block mt-4 text-xs font-bold text-amber-700">Filter Aravali &rarr;</span>
+        </div>
+
+        <div onclick="setHouseFilter('Shivalik'); document.getElementById('directory').scrollIntoView({behavior: 'smooth'})" class="p-6 rounded-2xl bg-rose-50/70 border border-rose-200 hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-rose-500 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">S</div>
+          <h4 class="text-lg font-bold text-slate-900 group-hover:text-rose-800 transition-colors">Shivalik House</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Fierce loyalty, creative geniuses, video editors, and the protectors of batch pride.</p>
+          <span class="inline-block mt-4 text-xs font-bold text-rose-700">Filter Shivalik &rarr;</span>
+        </div>
+
+        <div onclick="setHouseFilter('Udaigiri'); document.getElementById('directory').scrollIntoView({behavior: 'smooth'})" class="p-6 rounded-2xl bg-purple-50/70 border border-purple-200 hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-purple-500 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">U</div>
+          <h4 class="text-lg font-bold text-slate-900 group-hover:text-purple-800 transition-colors">Udaigiri House</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Star footballers, musical virtuosos, dance legends, and stage entertainers.</p>
+          <span class="inline-block mt-4 text-xs font-bold text-purple-700">Filter Udaigiri &rarr;</span>
+        </div>
+
+        <div onclick="setHouseFilter('Nilgiri'); document.getElementById('directory').scrollIntoView({behavior: 'smooth'})" class="p-6 rounded-2xl bg-sky-50/70 border border-sky-200 hover:shadow-md transition-all cursor-pointer group">
+          <div class="w-10 h-10 rounded-xl bg-sky-500 text-white flex items-center justify-center font-bold text-lg mb-4 shadow-sm">N</div>
+          <h4 class="text-lg font-bold text-slate-900 group-hover:text-sky-800 transition-colors">Nilgiri House</h4>
+          <p class="text-xs text-slate-600 mt-2 leading-relaxed">Master balancers, cool-headed strategists, and academic anchors of the batch.</p>
+          <span class="inline-block mt-4 text-xs font-bold text-sky-700">Filter Nilgiri &rarr;</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CLEAN PRIVACY-SAFE FOOTER ==================== -->
+  <footer class="bg-slate-900 text-white py-12 px-4 sm:px-6 border-t border-slate-800">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-xs text-slate-400">
+      <div class="flex items-center gap-3">
+        <span class="w-7 h-7 rounded-lg bg-amber-500/20 border border-amber-500/30 text-amber-400 flex items-center justify-center text-xs font-bold">27</span>
+        <p>&copy; 27th Batch · Jawahar Navodaya Vidyalaya Morigaon. Dedicated to lifelong brotherhood & campus memories.</p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button onclick="downloadSelf()" class="font-medium text-amber-400 hover:text-amber-300 inline-flex items-center gap-1.5 cursor-pointer">
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Download index.html</span>
+        </button>
+        <span>·</span>
+        <a href="#" onclick="window.scrollTo({top: 0, behavior: 'smooth'}); return false;" class="hover:text-amber-400">Back to Top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== STUDENT DETAIL MODAL ==================== -->
+  <div id="detailModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-sm">
+    <div class="absolute inset-0" onclick="closeDetailModal()"></div>
+    <div class="relative z-10 w-full max-w-xl bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden max-h-[90vh] flex flex-col">
+      <div id="modalHeader" class="h-24 bg-gradient-to-r from-amber-500 to-amber-700 relative p-6 flex items-end justify-between text-white">
+        <span class="text-xs font-semibold uppercase tracking-wider">27th Batch · JNV Morigaon</span>
+        <button onclick="closeDetailModal()" class="p-2 rounded-full bg-black/25 hover:bg-black/40 text-white transition-colors cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+      </div>
+
+      <div class="p-6 pt-0 overflow-y-auto">
+        <div class="flex items-end justify-between -mt-10 mb-4">
+          <div id="modalAvatarSlot" class="relative"></div>
+          <button id="modalShareBtn" onclick="copyCurrentModalLink()" class="px-3 py-1.5 text-xs font-medium rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 transition-colors">
+            Share Bio
+          </button>
+        </div>
+
+        <div class="mb-4">
+          <div class="flex items-center gap-2 mb-1" id="modalHouseBadgeSlot"></div>
+          <h2 id="modalStudentName" class="text-2xl font-bold text-slate-900 font-display"></h2>
+        </div>
+
+        <div id="modalAchievementSlot" class="mb-4"></div>
+
+        <div class="mb-6">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Batch Profile & Story</h4>
+          <div id="modalBioText" class="p-4 rounded-2xl bg-slate-50 border border-slate-100 text-slate-700 text-sm md:text-base leading-relaxed"></div>
+        </div>
+
+        <div id="modalSocialsSlot" class="mb-4"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== MEMORY LIGHTBOX MODAL ==================== -->
+  <div id="memoryLightbox" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md">
+    <div class="absolute inset-0" onclick="closeMemoryLightbox()"></div>
+    <div class="relative z-10 w-full max-w-2xl bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden flex flex-col">
+      <div id="lightboxBanner" class="relative h-64 sm:h-72 bg-gradient-to-tr from-amber-600 to-purple-700 flex items-center justify-center text-white p-8 text-center">
+        <button onclick="closeMemoryLightbox()" class="absolute top-4 right-4 p-2 rounded-full bg-black/30 hover:bg-black/50 text-white transition-colors cursor-pointer">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <div class="space-y-3">
+          <div id="lightboxEmoji" class="text-4xl">📷</div>
+          <h3 id="lightboxTitle" class="text-2xl sm:text-3xl font-extrabold font-display"></h3>
+          <div class="flex items-center justify-center gap-3 text-xs text-white/90 font-medium">
+            <span id="lightboxCategory" class="px-3 py-1 rounded-full bg-white/20 border border-white/25"></span>
+            <span>·</span>
+            <span id="lightboxLocation"></span>
+          </div>
+        </div>
+      </div>
+      <div class="p-6">
+        <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Event Chronicle</h4>
+        <p id="lightboxCaption" class="text-slate-700 text-sm sm:text-base leading-relaxed p-4 rounded-2xl bg-slate-50 border border-slate-100"></p>
+        <div class="mt-6 flex justify-end">
+          <button onclick="closeMemoryLightbox()" class="px-5 py-2.5 rounded-xl bg-slate-900 text-white text-xs font-semibold hover:bg-slate-800 transition-colors cursor-pointer">
+            Close Snapshot
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT ==================== -->
+  <script>
+    // EXACTLY the 11 Uploaded Students from the Google Sheet
+    const batchStudents = [
+      {
+        id: "s-1",
+        name: "Lakhyajit Darphang",
+        house: "Aravali",
+        bio: "Even though he joined us a little later through Class 6 lateral entry, Lakshyajit didn't waste any time becoming the VIP guest of every bench 'scandal' and a permanent fixture in every clash—whether it's with seniors or teachers! Armed with a massive local network outside the hostel, he is our go-to mastermind when trouble calls or a squad is needed. Always ready with the whole gang on speed dial, he's the ultimate trouble-maker turned ride-or-die friend without whom our batch stories are incomplete.",
+        achievements: "Mastermind Networker & Lateral Entry Icon",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-2",
+        name: "Piku Sarkar",
+        house: "Shivalik",
+        bio: "The official mastermind editor behind all our batch videos and reels, Piku is the true definition of a 'pocket-sized dynamite'! Though small in size, he operates on a completely different level. Don't go by his innocent looks—when it comes to batch scandals and clashes, he is Lakhyajit's partner-in-crime and is always front and center in every single fight. A creative genius with zero fear, our batch stories simply wouldn't exist without his edits and his chaos!",
+        achievements: "Official Batch Reel & Video Editor",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-3",
+        name: "Abhinash Kumar Nath",
+        house: "Shivalik",
+        bio: "The creative powerhouse and elite video editor of our batch, teaming up with Piku to bring all our memories to life on screen! Beyond his editing wizardry, Abhinash wears the crown of the CCA Captain, pulling the strings behind every major school function and event with absolute perfection. Unlike some of our resident troublemakers, he stays out of unnecessary chaos—mostly—but when it comes to managing the stage, organizing programs, and running the show like a true boss, he is the undisputed king of the batch!",
+        achievements: "CCA Captain & Master of School Ceremonies",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-4",
+        name: "Sidhartha Raj Pangchong",
+        house: "Shivalik",
+        bio: "Lakhyajit's partner-in-crime and an absolute force of nature in our batch! Sidhartha is the definition of fearless—he doesn't care if it's a junior, a senior, or even the Principal himself, when he's in the middle of a clash, nobody is safe. Operating on a completely different level of raw energy and aggression, his legendary temper means game over for anyone who messes with him. A dangerous mix of loyalty and pure chaos, our batch stories would be incomplete without his wild presence!",
+        achievements: "Fearless Batch Vanguard & Brotherhood Defender",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-5",
+        name: "Kalyan Jyoti Medhi",
+        house: "Udaigiri",
+        bio: "The undisputed dance icon of our batch—no school function or stage show is complete without Kalyan hitting the dance floor, often having teachers jokingly ask if dancing is all he does! But his talent doesn't stop at rhythm; he is a masterclass in comedy with top-tier acting skills in class that leave everyone in splits. Famous for his sharp tongue, unique talking style, and unmatched swag, he’s an absolute entertainer who brings life to every single moment!",
+        achievements: "Undisputed Batch Dance Icon & Class Comic",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-6",
+        name: "Litan Halder",
+        house: "Nilgiri",
+        bio: "The ultimate master of balance in our batch! Litan is the rare breed who manages to be right there in the middle of every gang clash and wild adventure, while still keeping his academics completely on track. Not as aggressively fiery as the others, he’s chill and level-headed, hanging out with both the absolute toppers and the notorious batch troublemakers with equal ease. With a solid reputation among teachers and a knack for staying out of major trouble while still having maximum fun, he's a true all-rounder!",
+        achievements: "Academic & Campus Adventure All-Rounder",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-7",
+        name: "Tinku Nath",
+        house: "Aravali",
+        bio: "A regular face in our batch clashes and campus adventures, Tinku operates on his own unpredictable wavelength in class! Famous for his fluent swearing and hilarious antics, he has a unique way with juniors—never laying a hand on them, but driving them crazy with funny, non-stop tasks like making them carry water buckets. But that's not all; when school programs and functions roll around, he transforms into an absolute powerhouse on the dance floor, showing off some seriously impressive dance moves!",
+        achievements: "Stage Dance Powerhouse & Class Wildcard",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-8",
+        name: "Biki Das",
+        house: "Shivalik",
+        bio: "The ultimate ride-or-die loyalist of our batch—classes, adventures, and campus clashes are literally incomplete without him! Vicky is the definition of a true friend who never switches sides or plays the traitor. Whether it's a fight outside school or a clash with teachers where the squad is clearly in the wrong, he stands firmly by his friends no matter what. Always ready to show up with his squad at a single call, he's the backbone of our group's brotherhood!",
+        achievements: "Ride-or-Die Brotherhood Pillar",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-9",
+        name: "Prasurjya Kumar Nath",
+        house: "Udaigiri",
+        bio: "A master of contrasting talents! Prasurjya is a hardcore regular in batch clashes and campus adventures, known for keeping juniors strictly in line with some legendary ragging sessions. While he's always down for the wildest underground habits and activities, he has a completely different side on stage—he's an absolute pro at playing musical instruments during daily school assemblies. A dangerous mix of street-smart menace and musical wizardry, you simply can't ignore his vibe!",
+        achievements: "Morning Assembly Lead Instrumentalist",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-10",
+        name: "Rupjyoti Cholong",
+        house: "Udaigiri",
+        bio: "The ultimate all-rounder of our batch! Rubajyoti is a rare combination of brains and brawn—good at academics and a regular face in campus clashes and adventures. As Sidhartha’s right-hand man and close buddy, he's never far from the action, and while he is generally chill with everyone (maintaining great bonds with most teachers and juniors), you definitely don't want to see him when his dangerous temper flares up. On top of his wild side, he's the undisputed star footballer of our batch, running both the field and the campus with absolute swag!",
+        achievements: "Star Footballer & Academic Heavyweight",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      },
+      {
+        id: "s-11",
+        name: "Prankrishna Bora",
+        house: "Aravali",
+        bio: "The absolute wildcard and walking mystery of our batch! Prankrishna operates on a dimension of his own—while he's a bright student on the academic side, nobody (and I mean *nobody*) ever knows what crazy stunt he's going to pull next. Famous for doing things in class and hostel rooms that nobody else would even dare to imagine, his unpredictable antics are legendary. A brilliant mind wrapped in absolute chaos, he is truly a one-of-a-kind legend of our batch!",
+        achievements: "Hostel Legend & Academic Wildcard",
+        photo: "",
+        instagram: "",
+        linkedin: "",
+        featured: true
+      }
+    ];
+
+    // Memory Lane Data
+    const schoolMemories = [
+      {
+        id: 'mem-1',
+        title: 'Annual Cultural Fest & CCA Stage',
+        category: 'Cultural',
+        year: 'Batch 27',
+        location: 'Main School Auditorium',
+        caption: 'Kalyan and the dance troupe setting the stage on fire with the classic folk & Bollywood mashup, while Abhinash managed the lights and Piku recorded the reel moments.',
+        gradient: 'from-amber-600 via-rose-600 to-purple-700',
+        emoji: '🎭'
+      },
+      {
+        id: 'mem-2',
+        title: 'Inter-House Athletics Meet & Tug of War',
+        category: 'Sports',
+        year: 'Sports Week',
+        location: 'Main School Ground',
+        caption: 'Fierce house rivalry between Aravali, Shivalik, Udaigiri, and Nilgiri! Rupjyoti leading the football charge and Sidhartha anchoring the unstoppable rope pull.',
+        gradient: 'from-emerald-600 via-teal-600 to-sky-700',
+        emoji: '🏆'
+      },
+      {
+        id: 'mem-3',
+        title: 'Hostel Night & Midnight Jam Session',
+        category: 'Hostel',
+        year: 'Hostel Dorms',
+        location: 'Senior Wing Corridor',
+        caption: 'Late night guitar acoustics, Maggi secretly cooked with hostel immersion rods, and endless discussions lasting until the 5:30 AM morning PT bell rang.',
+        gradient: 'from-purple-600 via-indigo-600 to-blue-800',
+        emoji: '🔥'
+      },
+      {
+        id: 'mem-4',
+        title: 'Daily Morning Assembly & Band March',
+        category: 'Milestone',
+        year: 'Academic Quad',
+        location: 'Central Assembly Ground',
+        caption: 'Prasurjya on the assembly instruments, uniform drills, thought of the day recitations, and the quiet struggle of standing under the scorching morning sun.',
+        gradient: 'from-blue-600 via-sky-600 to-cyan-700',
+        emoji: '🎺'
+      },
+      {
+        id: 'mem-5',
+        title: 'Farewell Night: Batch 27 Send-off',
+        category: 'Milestone',
+        year: 'Graduation Night',
+        location: 'School Dining Hall & Quad',
+        caption: 'Tearful speeches, signing each other’s white school shirts with permanent markers, tight hugs, and vows to stay brothers for life.',
+        gradient: 'from-rose-600 via-pink-600 to-amber-700',
+        emoji: '❤️'
+      },
+      {
+        id: 'mem-6',
+        title: 'Last-Bench Chronicles & Classroom Shenanigans',
+        category: 'Hostel',
+        year: 'Senior Secondary',
+        location: 'Class XII Classroom',
+        caption: 'Sharing lunch boxes five minutes before the bell, ducking from flying chalks, and Lakhyajit leading the bench debates during free periods.',
+        gradient: 'from-amber-600 via-orange-600 to-red-700',
+        emoji: '🎒'
+      }
+    ];
+
+    let currentFilter = 'All';
+    let searchQuery = '';
+    let selectedStudent = null;
+    let selectedMemCategory = 'All';
+
+    function getInitials(name) {
+      if (!name) return '??';
+      const parts = name.trim().split(/\s+/);
+      if (parts.length === 1) return parts[0].substring(0, 2).toUpperCase();
+      return (parts[0][0] + parts[parts.length - 1][0]).toUpperCase();
+    }
+
+    function getHouseTheme(house) {
+      const h = house.toLowerCase();
+      if (h.includes('aravali')) {
+        return { bg: 'bg-amber-50', text: 'text-amber-800', border: 'border-amber-200', avatarGrad: 'from-amber-500 to-amber-700' };
+      }
+      if (h.includes('shivalik')) {
+        return { bg: 'bg-rose-50', text: 'text-rose-800', border: 'border-rose-200', avatarGrad: 'from-rose-500 to-rose-700' };
+      }
+      if (h.includes('udaigiri')) {
+        return { bg: 'bg-purple-50', text: 'text-purple-800', border: 'border-purple-200', avatarGrad: 'from-purple-500 to-purple-700' };
+      }
+      return { bg: 'bg-sky-50', text: 'text-sky-800', border: 'border-sky-200', avatarGrad: 'from-sky-500 to-sky-700' };
+    }
+
+    function isValid(val) {
+      if (!val) return false;
+      const t = val.trim();
+      return (t !== '' && !t.includes('[Insert') && !t.includes('optional') && !t.includes('handle here'));
+    }
+
+    function renderDirectory() {
+      const grid = document.getElementById('studentsGrid');
+      const empty = document.getElementById('emptyState');
+      const countLabel = document.getElementById('resultsCount');
+
+      const filtered = batchStudents.filter(s => {
+        if (currentFilter !== 'All' && s.house !== currentFilter) return false;
+        if (!searchQuery) return true;
+        const q = searchQuery.toLowerCase();
+        return (
+          s.name.toLowerCase().includes(q) ||
+          s.bio.toLowerCase().includes(q) ||
+          s.house.toLowerCase().includes(q) ||
+          (s.achievements && s.achievements.toLowerCase().includes(q))
+        );
+      });
+
+      countLabel.textContent = `Showing ${filtered.length} batchmate${filtered.length === 1 ? '' : 's'}`;
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        empty.classList.remove('hidden');
+        return;
+      }
+
+      empty.classList.add('hidden');
+      grid.innerHTML = filtered.map(s => {
+        const theme = getHouseTheme(s.house);
+        const initials = getInitials(s.name);
+        const hasAchieve = isValid(s.achievements);
+        const hasInsta = isValid(s.instagram);
+        const hasLinkedin = isValid(s.linkedin);
+
+        return `
+          <article onclick="openDetailModal('${s.id}')" class="group relative flex flex-col justify-between bg-white rounded-2xl border border-slate-200/90 hover:border-amber-300/90 p-6 shadow-sm hover:shadow-xl hover:shadow-amber-500/5 hover:-translate-y-1.5 hover:scale-[1.025] transition-all duration-300 ease-out cursor-pointer will-change-transform">
+            <div>
+              <div class="flex items-start gap-4 mb-4">
+                <div class="w-16 h-16 rounded-full bg-gradient-to-br ${theme.avatarGrad} text-white flex items-center justify-center font-bold text-lg tracking-wider ring-2 ring-white shadow-sm shrink-0">
+                  ${initials}
+                </div>
+                <div class="flex-1 min-w-0">
+                  <div class="flex items-center gap-1.5 mb-1 flex-wrap">
+                    <span class="inline-flex text-[11px] font-semibold uppercase px-2 py-0.5 rounded-md ${theme.bg} ${theme.text} border ${theme.border}">
+                      ${s.house} House
+                    </span>
+                  </div>
+                  <h4 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug">
+                    ${s.name}
+                  </h4>
+                </div>
+              </div>
+
+              ${hasAchieve ? `
+                <div class="mb-3 px-3 py-2 rounded-xl bg-amber-50/70 border border-amber-200/70 text-amber-900 text-xs flex items-center gap-2">
+                  <span class="text-amber-600 font-bold">🏆</span>
+                  <span class="font-medium line-clamp-1">${s.achievements}</span>
+                </div>
+              ` : ''}
+
+              <p class="text-slate-600 text-sm leading-relaxed line-clamp-3 mb-4">
+                ${s.bio}
+              </p>
+            </div>
+
+            <div class="pt-3 border-t border-slate-100 flex items-center justify-between gap-2 mt-auto">
+              <div class="flex items-center gap-2">
+                ${hasInsta ? `<span class="text-rose-600 text-xs font-semibold">Instagram</span>` : ''}
+                ${hasLinkedin ? `<span class="text-sky-600 text-xs font-semibold">LinkedIn</span>` : ''}
+                ${!hasInsta && !hasLinkedin ? `<span class="text-[11px] text-slate-400">27th Batch Member</span>` : ''}
+              </div>
+              <span class="text-xs font-semibold text-slate-700 group-hover:text-amber-800 flex items-center gap-1">
+                Read Story &rarr;
+              </span>
+            </div>
+          </article>
+        `;
+      }).join('');
+    }
+
+    function renderMemoryLane() {
+      const grid = document.getElementById('memoryGrid');
+      const filtered = selectedMemCategory === 'All'
+        ? schoolMemories
+        : schoolMemories.filter(m => m.category === selectedMemCategory);
+
+      grid.innerHTML = filtered.map(m => `
+        <article onclick="openMemoryLightbox('${m.id}')" class="group bg-white rounded-2xl border border-slate-200/90 hover:border-slate-300 overflow-hidden shadow-sm hover:shadow-md transition-all flex flex-col cursor-pointer">
+          <div class="relative h-48 bg-slate-900 overflow-hidden">
+            <div class="absolute inset-0 bg-gradient-to-tr ${m.gradient} opacity-85 group-hover:scale-105 transition-transform duration-500"></div>
+            <div class="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
+              <div class="text-3xl mb-1">${m.emoji}</div>
+              <span class="text-xs font-bold tracking-widest uppercase opacity-90">JNV Morigaon Memory</span>
+            </div>
+            <div class="absolute top-3 left-3 right-3 flex items-center justify-between text-[11px] font-semibold text-white/95">
+              <span class="px-2.5 py-1 rounded-md bg-black/40 backdrop-blur-sm border border-white/20">${m.category}</span>
+              <span class="px-2.5 py-1 rounded-md bg-black/40 backdrop-blur-sm border border-white/20">${m.year}</span>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 h-14 bg-gradient-to-t from-black/80 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 text-xs text-white/90 font-medium">📍 ${m.location}</div>
+          </div>
+          <div class="p-5 flex-1 flex flex-col justify-between">
+            <div>
+              <h4 class="text-lg font-bold text-slate-900 group-hover:text-amber-800 transition-colors leading-snug mb-2 font-display">${m.title}</h4>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed line-clamp-3">${m.caption}</p>
+            </div>
+            <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between text-xs font-semibold text-amber-800">
+              <span>View Memory</span>
+              <span>&rarr;</span>
+            </div>
+          </div>
+        </article>
+      `).join('');
+    }
+
+    function setMemoryFilter(cat) {
+      selectedMemCategory = cat;
+      document.querySelectorAll('.memcat-btn').forEach(btn => {
+        btn.classList.remove('bg-slate-900', 'text-white');
+        btn.classList.add('text-slate-600');
+      });
+      const active = document.getElementById(`memcat-${cat}`);
+      if (active) {
+        active.classList.add('bg-slate-900', 'text-white');
+        active.classList.remove('text-slate-600');
+      }
+      renderMemoryLane();
+    }
+
+    function openMemoryLightbox(id) {
+      const mem = schoolMemories.find(m => m.id === id);
+      if (!mem) return;
+      document.getElementById('lightboxEmoji').textContent = mem.emoji;
+      document.getElementById('lightboxTitle').textContent = mem.title;
+      document.getElementById('lightboxCategory').textContent = mem.category;
+      document.getElementById('lightboxLocation').textContent = `📍 ${mem.location}`;
+      document.getElementById('lightboxCaption').textContent = `"${mem.caption}"`;
+      document.getElementById('lightboxBanner').className = `relative h-64 sm:h-72 bg-gradient-to-tr ${mem.gradient} flex items-center justify-center text-white p-8 text-center`;
+      document.getElementById('memoryLightbox').classList.remove('hidden');
+    }
+
+    function closeMemoryLightbox() {
+      document.getElementById('memoryLightbox').classList.add('hidden');
+    }
+
+    function setHouseFilter(house) {
+      currentFilter = house;
+      document.querySelectorAll('.house-filter-btn').forEach(btn => {
+        btn.classList.remove('bg-amber-500', 'text-slate-950');
+        btn.classList.add('bg-white/10', 'text-white');
+      });
+      const activeBtn = document.getElementById(`filter-${house}`);
+      if (activeBtn) {
+        activeBtn.classList.remove('bg-white/10', 'text-white');
+        activeBtn.classList.add('bg-amber-500', 'text-slate-950');
+      }
+      renderDirectory();
+    }
+
+    function handleSearch() {
+      const val = document.getElementById('searchInput').value;
+      searchQuery = val.trim();
+      const clearBtn = document.getElementById('clearSearchBtn');
+      if (searchQuery) clearBtn.classList.remove('hidden');
+      else clearBtn.classList.add('hidden');
+      renderDirectory();
+    }
+
+    function clearSearch() {
+      document.getElementById('searchInput').value = '';
+      searchQuery = '';
+      document.getElementById('clearSearchBtn').classList.add('hidden');
+      renderDirectory();
+    }
+
+    function openDetailModal(studentId) {
+      const s = batchStudents.find(x => x.id === studentId);
+      if (!s) return;
+      selectedStudent = s;
+
+      const theme = getHouseTheme(s.house);
+      const initials = getInitials(s.name);
+      const hasAchieve = isValid(s.achievements);
+
+      document.getElementById('modalStudentName').textContent = s.name;
+      document.getElementById('modalBioText').textContent = `"${s.bio}"`;
+      document.getElementById('modalHeader').className = `h-24 bg-gradient-to-r ${theme.avatarGrad} relative p-6 flex items-end justify-between text-white`;
+
+      document.getElementById('modalAvatarSlot').innerHTML = `
+        <div class="w-20 h-20 rounded-full bg-gradient-to-br ${theme.avatarGrad} text-white flex items-center justify-center font-bold text-2xl ring-4 ring-white shadow-md">
+          ${initials}
+        </div>
+      `;
+
+      document.getElementById('modalHouseBadgeSlot').innerHTML = `
+        <span class="inline-flex text-xs font-bold uppercase px-2.5 py-0.5 rounded-md ${theme.bg} ${theme.text} border ${theme.border}">
+          ${s.house} House
+        </span>
+      `;
+
+      const achieveSlot = document.getElementById('modalAchievementSlot');
+      if (hasAchieve) {
+        achieveSlot.innerHTML = `
+          <div class="p-3.5 rounded-2xl bg-amber-50/80 border border-amber-200/80 flex items-start gap-3">
+            <span class="text-amber-600 text-xl">🏆</span>
+            <div>
+              <span class="text-xs font-bold uppercase text-amber-800 block">Achievement / Distinction</span>
+              <p class="text-sm font-semibold text-slate-800">${s.achievements}</p>
+            </div>
+          </div>
+        `;
+        achieveSlot.classList.remove('hidden');
+      } else {
+        achieveSlot.innerHTML = '';
+        achieveSlot.classList.add('hidden');
+      }
+
+      document.getElementById('detailModal').classList.remove('hidden');
+    }
+
+    function closeDetailModal() {
+      document.getElementById('detailModal').classList.add('hidden');
+    }
+
+    function copyCurrentModalLink() {
+      if (!selectedStudent) return;
+      navigator.clipboard.writeText(`Batchmate: ${selectedStudent.name} (${selectedStudent.house} House) - 27th Batch JNV Morigaon:\n"${selectedStudent.bio}"`);
+      const btn = document.getElementById('modalShareBtn');
+      btn.textContent = "Copied Bio!";
+      setTimeout(() => { btn.textContent = "Share Bio"; }, 2000);
+    }
+
+    function downloadSelf() {
+      const fullHtml = document.documentElement.outerHTML;
+      const blob = new Blob([fullHtml], { type: 'text/html;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'index.html';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    }
+
+    let introDismissed = false;
+    function dismissIntro() {
+      if (introDismissed) return;
+      introDismissed = true;
+      const intro = document.getElementById('welcome-intro');
+      intro.style.opacity = '0';
+      setTimeout(() => { intro.classList.add('hidden'); }, 500);
+    }
+
+    function reopenIntro() {
+      const intro = document.getElementById('welcome-intro');
+      intro.classList.remove('hidden');
+      intro.style.opacity = '1';
+      introDismissed = false;
+    }
+
+    let prog = 0;
+    const pBar = document.getElementById('intro-progress');
+    const introInterval = setInterval(() => {
+      prog += 1.5;
+      if (pBar) pBar.style.width = prog + '%';
+      if (prog >= 100) {
+        clearInterval(introInterval);
+        dismissIntro();
+      }
+    }, 45);
+
+    renderDirectory();
+    renderMemoryLane();
+  </script>
+</body>
+</html>
